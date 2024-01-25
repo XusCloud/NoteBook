@@ -1,0 +1,21 @@
+Kube init报错：
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[kubelet-check] Initial timeout of 40s passed.
+
+Kubectl 报错 ：
+7月 24 11:11:27 200-master kubelet[2522]: E0724 11:11:27.119993 2522 kubelet.go:2424] "Error getting node" err="node "200-master" not found"
+
+Containerd服务报错：
+修改Containerd配置：
+
+创建配置文件目录
+[root@k8s-01 ~]# mkdir /etc/containerd -p
+
+生成默认配置文件
+[root@k8s-01 ~]# containerd config default > /etc/containerd/config.toml
+
+--config,-c可以在启动守护程序时更改此路径
+配置文件的默认路径位于/etc/containerd/config.toml
+默认情况下k8s.gcr.io无法访问，所以使用我提供的阿里云镜像仓库地址即可
+sed -i 's/k8s.gcr.io/registry.cn-beijing.aliyuncs.com/abcdocker/' /etc/containerd/config.toml
+（此处应该改为手动vim修改配置文件，搜索k8s.gcr.io，修改为registry.cn-hangzhou.aliyuncs.com/google_containers）

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body,
+        .item::before {
+            background: url('https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg') no-repeat center fixed;
+            background-size: cover;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            /* backdrop-filter: blur(20px); */
+            position: relative;
+            width: 60%;
+            height: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 1px #fff;
+            color: #fff;
+            font-size: 15px;
+            font-weight: lighter;
+            line-height: 35px;
+            overflow: hidden;
+        }
+        .item::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: -20px;
+            filter: blur(10px);
+        }
+        h2 {
+            text-align:center;
+            color:#333;
+        }
+        p {
+            font-size:18px;
+            color:#FFFFFF;
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <h2>漫长的告别</h2>
+        <p>他转身走出去。我望着门关上。我聆听他的脚步顺着仿大理石长廊走开。过了一会儿声音渐小，终于静下来。我还是继续听。听什么？莫非希望他突然止步，转身回来，说服我改变心中的感受？算了，他没有。那是我最后一次见到他。</p>
+        <p>我再未见到他们中任何一位——除了警察。还没有人发明告别警察的方法。</p>
+    </div>
+</body>
+</html>

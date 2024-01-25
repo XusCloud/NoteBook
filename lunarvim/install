@@ -1,0 +1,6 @@
+perl 更换国内源
+cpan:
+  o conf urllist push https://mirrors.aliyun.com/CPAN/
+  o conf commit
+  o conf init 
+

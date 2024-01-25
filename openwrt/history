@@ -1,0 +1,220 @@
+    1  vm
+    2  vim
+    3  vi
+    4  sudo vi /boot/config.txt 
+    5  sudo vi /etc/apt/sources.list
+    6  sudo open /etc/apt/
+    7  sudo vi /etc/apt/sources.list
+    8  sudo vi /etc/apt/sources.list.d/raspi.list 
+    9  sudo apt update
+   10  sudo apt install vim
+   11  ifcongif
+   12  ifconfig
+   13  sudo vim /etc/netconfig 
+   14  ifconfig
+   15  pwd
+   16  passwd 
+   17  ifconfig
+   18  exit
+   19  ls
+   20  mkdir Docker
+   21  cd Docker
+   22  mkdir Portainer
+   23  ls
+   24  sudo apt update
+   25  sudo apt install apt-transport-https ca-certificates curl gnupg2 lsb-release software-properties-common
+   26  sudo apt upgrade
+   27  sudo apt install git gcc g++ make cmake build-essential
+   28  git --version
+   29  zsh
+   30  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   31  sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
+   32  sudo apt install zsh
+   33  sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
+   34  sudo apt install --no-install-recommends xserver-xorg
+   35  sudo apt autoremove
+   36  sudo apt install --no-install-recommends xinit
+   37  sudo apt install i3 lightdm ttf-wqy-zenhei
+   38  top
+   39  sudo apt install htop
+   40  htop
+   41  sudo apt install docker-ce
+   42  ls
+   43  curl -fsSL https://get.docker.com -o get-docker.sh
+   44  sudo sh get-docker.sh 
+   45  sudo sh get-docker.sh --mirror Aliyun
+   46  docker --version
+   47  docker ps -a
+   48  sudo docker ps -a
+   49  su
+   50  root
+   51  su root
+   52  sudo ip link set eth0 promisc on
+   53  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet
+   54  sudo docker network ls
+   55  sudo docker pull sulinggg/openwrt:latest
+   56  sudo docker network ls
+   57  sudo docker network create -d macvlan --subnet=192.168.0.120/24 --gateway=192.168.0.1 -o parent=eth0 macnet
+   58  sudo docker network ls
+   59  ifcongif
+   60  ifconfig
+   61  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 dockernet
+   62  docker network create --help
+   63  docker pull portainer/portainer-ce
+   64  sudo docker pull portainer/portainer-ce
+   65  docker run -d -p 9000:9000
+   66  --name portainer
+   67  --restart always
+   68  -v /var/run/docker.sock:/var/run/docker.sock
+   69  -v portainer_data:/data
+   70  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v Docker/portainer:/data portainer/portainer-ce
+   71  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v Docker/Portainer:/data portainer/portainer-ce
+   72  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ./Docker/Portainer:/data portainer/portainer-ce
+   73  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:./Docker/Portainer portainer/portainer-ce
+   74  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:Docker/Portainer portainer/portainer-ce
+   75  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v Docker/Portainer:/data  portainer/portainer-ce
+   76  sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ~/Docker/Portainer:/data  portainer/portainer-ce
+   77  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 dockernet
+   78  sudo docker network create -d macvlan --subnet=192.168.2.0/24 --gateway=192.168.2.1 -o parent=eth0 dockernet
+   79  sudo ip link set eth0 promisc on
+   80  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 -o macvlan_mode=bridge dockernet
+   81  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o macvlan_mode=bridge dockernet
+   82  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   83  sudo docker ps -a
+   84  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   85  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest
+   86  sudo docker run --restart always --name openwrt -d --network dockernet --privileged=true  sulinggg/openwrt:latest /sbin/init
+   87  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   88  sudo docker run --restart always --name openwrt -d --privileged sulinggg/openwrt:latest /sbin/init
+   89  sudo docker run --restart always --name openwrt  --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   90  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /bin/init
+   91  sudo docker run -it --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   92  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   93  sudo docker ps -a
+   94  sudo docker images
+   95  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt /sbin/init
+   96  sudo docker run --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   97  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+   98  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest  /sbin/init
+   99  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+  100  sudo docker ps -a
+  101  sudo docker remove c975bb1d9913
+  102  sudo docker run --restart always --name openwrt -d --network dockernet --privileged sulinggg/openwrt:latest /sbin/init
+  103  sudo docker exec -it openwrt bash
+  104  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --ip-range=192.168.0.120-192.168.0.150 --gateway=192.168.0.1 -o macvlan_mode=bridge dockernet
+  105  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --ip-range=192.168.0.120/24 --gateway=192.168.0.1 -o macvlan_mode=bridge dockernet
+  106  sudo docker network create -d macvlan --subnet=192.168.0.120/24 --gateway=192.168.0.1 -o macvlan_mode=bridge dockernet
+  107  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --ip-range=192.168.0.0/25 --gateway=192.168.0.1 -o macvlan_mode=bridge dockernet
+  108  sudo docker exec -it openwrt bash
+  109  sudo docker network create -d macvlan --subnet=192.168.0.0/24 --ip-range=192.168.0.0/25 --gateway=192.168.0.1 -o parent=eth0 dockernet
+  110  sudo docker exec -it openwrt bash
+  111  ifconfig
+  112  cp /etc/network/interfaces /etc/network/interfaces.bak
+  113  sudo cp /etc/network/interfaces /etc/network/interfaces.bak
+  114  sudo vim /etc/network/interfaces
+  115  sudo reboot
+  116  ifconfig
+  117  sudo docker exec -it openwrt bash
+  118  htop
+  119  ifconfig
+  120  ls
+  121  sudo docker exec -it openwrt bash
+  122  sudo vim /etc/network/interfaces
+  123  reboot
+  124  sudo vim /etc/network/interfaces
+  125  sudo reboot
+  126  htop
+  127  exit
+  128  shutdown now
+  129  sudo shutdown now
+  130  exitls
+  131  ls
+  132  ifconfig
+  133  exit
+  134  ifconfig
+  135  ifconfig | grep 192
+  136  ping 192.168.0.2
+  137  exit
+  138  ping 192.168.0.104
+  139  ifconfig
+  140  docker ps -a
+  141  history
+  142  sudo docker exec -it openwrt bash
+  143  exit
+  144  htop
+  145  docker ps -a
+  146  sudo docker ps =a
+  147  docker
+  148  docker ps =a
+  149  docker ps -a
+  150  sudo 
+  151  su
+  152  ps
+  153  su
+  154  history
+  155  htop
+  156  su
+  157  sudo htop
+  158  sudo
+  159  sudo apt upgrade
+  160  su
+  161  sudo passwd root
+  162  ls
+  163  cd Downloads/
+  164  ls
+  165  mv dst-admin-1.3.0.jar dst-admin.jar 
+  166  java -version
+  167  htop
+  168  docker ps -a
+  169  sudo docker ps -a 
+  170  history
+  171  sudo docker ps -a
+  172  ping 192.168.0.2
+  173  ipconfig
+  174  ifconfig
+  175  history
+  176  docker ps -a
+  177  su
+  178  history |grep vnc
+  179  sudo vim /etc/networks
+  180  systemctl network status
+  181  systemctl status network
+  182  systemctl status network.target 
+  183  systemctl restart network
+  184  service networking status
+  185  service networking restart
+  186  service networking status
+  187  ping www.baidu.com
+  188  ip -a
+  189  ip a
+  190  cd /etc/
+  191  ls
+  192  cd network/
+  193  ls
+  194  cd if-up.d/
+  195  ls
+  196  cd ..
+  197  cd if-down.d/
+  198  ls
+  199  cd ..
+  200  cd if-post-down.d/
+  201  ls
+  202  cd ..
+  203  cd if-pre-up.d/
+  204  ls
+  205  cd ../../
+  206  ls
+  207  netstat -tnlp
+  208  history |grep service
+  209  history |grep start
+  210  ping www.baidu.com
+  211  ping 192.168.0.2
+  212  ping www.baidu.com
+  213  ping www.goole.com
+  214  ping www.google.com
+  215  ping www.baidu.com
+  216  history 
+  217  exit
+  218  sudo vim /etc/network/interfaces
+  219  ip a
+  220  history >> history

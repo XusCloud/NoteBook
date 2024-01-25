@@ -1,0 +1,9 @@
+实际上，您将需要两个命令。一种用于保持MacBook保持清醒状态（即使关闭盖子），另一种用于在需要让MacBook再次进入睡眠状态时使用。
+
+注意：在关闭盖子的情况下保持MacBook运行，可能会在显示器和MacBook键盘之间产生热量。
+
+1）禁用Lid-Sleep的命令（保持系统唤醒）：
+sudo pmset -b sleep 0; sudo pmset -b disablesleep 1
+
+2）激活Lid-Sleep的命令（让系统像正常一样再次进入睡眠状态）：
+sudo pmset -b sleep 5; sudo pmset -b disablesleep 0
